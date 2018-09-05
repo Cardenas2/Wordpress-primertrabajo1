@@ -1,0 +1,11 @@
+<?php get_header(); ?>
+	<!--LLop para ver noticia comlpleta-->
+	<div class="container">
+		<?php if (have_posts()):while(have_posts()):the_post(); ?>
+		<h1><?php the_title(); ?></h1>
+		<div>
+			<?php the_content(); ?>
+		</div>
+		<?php endwhile; endif; ?> 
+	</div><!--fin coantainer-->
+<?php get_footer(); ?>
